@@ -2,63 +2,48 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
 import { FACILITIES } from "@/lib/data";
 
 export default function Facilities() {
   return (
-    <section className="section-padding bg-gradient-to-b from-sky-50/50 to-white">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="py-16 lg:py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
+          initial={{ opacity: 0, x: -16 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
         >
-          <span className="text-sm font-bold uppercase tracking-wider text-[#14B8A6]">
-            Our Facilities
+          <span className="text-xs font-semibold uppercase tracking-wide text-[#0B5ED7]">
+            Our Facility
           </span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold mt-2 text-[#1E293B]">
-            World-Class Infrastructure
+          <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl font-semibold mt-3 text-[#1F2937]">
+            Inside The Clinic
           </h2>
-          <p className="mt-4 text-slate-600 text-lg">
-            Our clinic is equipped with the latest dental technology to
-            ensure precise diagnosis, comfortable treatment, and faster
-            recovery.
-          </p>
 
-          <div className="mt-8 grid sm:grid-cols-2 gap-4">
-            {FACILITIES.map((facility, i) => (
-              <motion.div
-                key={facility}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-sm border border-slate-100"
-              >
-                <CheckCircle2 size={20} className="text-[#14B8A6] shrink-0" />
-                <span className="text-sm font-semibold text-[#1E293B]">
-                  {facility}
-                </span>
-              </motion.div>
+          <div className="mt-8 divide-y divide-slate-200 border-t border-slate-200">
+            {FACILITIES.map((facility) => (
+              <div key={facility.title} className="py-4">
+                <p className="font-semibold text-[#1F2937]">{facility.title}</p>
+                <p className="mt-1 text-sm text-slate-600">{facility.description}</p>
+              </div>
             ))}
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, x: 16 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="rounded-[2rem] overflow-hidden shadow-2xl"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="rounded-xl overflow-hidden shadow-[0_8px_30px_-10px_rgba(15,23,42,0.2)]"
         >
           <Image
             src="/images/clinic.png"
-            alt="Anand Dental Hub Facilities"
-            width={650}
-            height={600}
-            className="w-full h-[420px] lg:h-[480px] object-cover"
+            alt="Shawitry Dental Care clinic facility"
+            width={620}
+            height={560}
+            className="w-full h-[380px] lg:h-[460px] object-cover"
           />
         </motion.div>
       </div>

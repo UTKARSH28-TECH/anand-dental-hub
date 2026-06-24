@@ -1,135 +1,166 @@
 export const CLINIC = {
-  name: "Anand Dental Hub",
-  fullName: "Anand Dental Hub (M.D.S. Clinic)",
-  tagline: "Creating Healthy, Beautiful & Confident Smiles",
-  rating: 4.9,
-  reviews: 534,
+  name: "Shawitry Dental Care",
+  fullName: "Shawitry Dental Care & Implant Centre",
+  tagline: "Advanced Dentistry. Trusted Care. Confident Smiles.",
+  established: 2014,
   phone: "+91 90363 40518",
   phoneHref: "tel:+919036340518",
-  email: "amritanand86@gmail.com",
+  email: "info@shawitrydental.in",
   address: {
-    line1: "Near Carmel School Road, Alkapuri Chowk",
-    line2: "Shree Krishna Nagar, Forest Colony",
+    line1: "Chourasiya Market, Main Road",
+    line2: "Near H.E. School, Buxidih",
     city: "Giridih, Jharkhand – 815301",
   },
-  hours: "Monday – Saturday, 10:00 AM – 7:00 PM",
+  hoursWeekday: "Monday – Saturday: 9 AM – 8 PM",
+  hoursSunday: "Sunday: 10 AM – 2 PM",
 };
 
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Doctors", href: "#doctors" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Doctor", href: "#doctor" },
+  { label: "Patients", href: "#patients" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const SERVICES = [
   {
-    title: "Root Canal Treatment",
-    description: "Pain-free root canal procedures using modern techniques.",
-    icon: "Activity",
-  },
-  {
     title: "Dental Implants",
-    description: "Permanent replacement for missing teeth.",
+    description: "Fixed, long-term replacement for missing teeth, planned around your bite and bone structure.",
     icon: "Anchor",
   },
   {
-    title: "Teeth Whitening",
-    description: "Professional smile enhancement.",
-    icon: "Sparkles",
+    title: "Root Canal Treatment",
+    description: "Single-visit and multi-visit RCT done under local anaesthesia with minimal discomfort.",
+    icon: "Activity",
   },
   {
-    title: "Braces & Aligners",
-    description: "Advanced orthodontic treatment.",
-    icon: "AlignCenter",
-  },
-  {
-    title: "Cosmetic Dentistry",
-    description: "Smile makeovers and aesthetic corrections.",
+    title: "Smile Designing",
+    description: "Shape, alignment and shade correction planned to suit your face and natural smile line.",
     icon: "Smile",
   },
   {
+    title: "Crowns & Bridges",
+    description: "Ceramic and metal-ceramic crowns for damaged or root-canal treated teeth.",
+    icon: "ShieldCheck",
+  },
+  {
+    title: "Dentures",
+    description: "Complete and partial dentures fitted and adjusted for everyday comfort.",
+    icon: "AlignCenter",
+  },
+  {
     title: "Pediatric Dentistry",
-    description: "Specialized dental care for children.",
+    description: "Gentle dental care for children, including cavity treatment and habit correction.",
     icon: "Baby",
   },
   {
-    title: "Laser Dentistry",
-    description: "Minimally invasive procedures.",
-    icon: "Zap",
+    title: "Teeth Whitening",
+    description: "In-clinic whitening sessions for tea, coffee and tobacco staining.",
+    icon: "Sparkles",
   },
   {
-    title: "Preventive Dental Care",
-    description: "Regular checkups and oral health maintenance.",
-    icon: "ShieldCheck",
+    title: "Preventive Dentistry",
+    description: "Scaling, polishing and regular checkups to catch problems before they need major treatment.",
+    icon: "Stethoscope",
+  },
+  {
+    title: "Fluoride Application",
+    description: "Strengthens enamel and reduces decay risk, especially recommended for children.",
+    icon: "Droplet",
+  },
+  {
+    title: "Gap Filling",
+    description: "Closing spaces between teeth using composite bonding or prosthetic options.",
+    icon: "PenLine",
+  },
+  {
+    title: "Hybrid Prosthesis",
+    description: "Implant-supported fixed prosthesis for patients missing most or all of their teeth.",
+    icon: "Layers",
+  },
+  {
+    title: "Digital Smile Designing",
+    description: "Preview your treatment outcome digitally before any work begins.",
+    icon: "MonitorSmartphone",
   },
 ];
 
-export const DOCTORS = [
-  {
-    name: "Dr. Amrit Anand",
-    qualification: "M.D.S.",
-    designation: "Chief Dental Surgeon & Orthodontist",
-    description:
-      "Expert in smile design, braces, aligners, root canal treatments, cosmetic dentistry and advanced dental care.",
-    image: "/images/doctor-1.png",
-    experience: "10+ Years Experience",
-  },
-  {
-    name: "Dr. Priyanka",
-    qualification: "M.D.S.",
-    designation: "Dental Surgeon",
-    description:
-      "Experienced in preventive dentistry, pediatric dentistry, restorative treatments and comprehensive oral healthcare.",
-    image: "/images/doctor-2.png",
-    experience: "Dental Surgeon",
-  },
-];
+export const DOCTOR = {
+  name: "Dr. Mohit Kumar",
+  designation: "Dental Surgeon & Implant Specialist",
+  image: "/images/doctor.png",
+  bio: "Dr. Mohit Kumar is known for his patient-friendly approach, detailed treatment explanations, and commitment to delivering high-quality dental care. Patients frequently appreciate his professionalism, knowledge, and ability to make both children and adults feel comfortable during treatment.",
+  quote:
+    "Patients appreciate Dr. Mohit Kumar for taking time to explain procedures clearly and helping them make informed decisions about their oral health.",
+  specializations: [
+    "Dental Implants",
+    "Root Canal Treatment",
+    "Cosmetic Dentistry",
+    "Smile Designing",
+    "Crowns & Bridges",
+    "Dentures",
+    "Pediatric Dentistry",
+    "Preventive Dentistry",
+  ],
+};
 
 export const FACILITIES = [
-  "Digital Diagnostics",
-  "Modern Dental Chairs",
-  "Sterilization Protocols",
-  "Comfortable Waiting Area",
-  "Advanced Equipment",
-  "Patient-Friendly Environment",
+  { title: "Modern Dental Equipment", description: "Updated chairs and instruments used across all treatment rooms." },
+  { title: "Sterilization Protocols", description: "Autoclave sterilization followed for every instrument, every patient." },
+  { title: "Comfortable Treatment Rooms", description: "Private, well-lit rooms designed to reduce dental anxiety." },
+  { title: "Patient-Friendly Environment", description: "Clear communication before any procedure begins." },
+  { title: "Advanced Diagnostics", description: "Digital X-rays for accurate diagnosis and treatment planning." },
+  { title: "Implant Care Facilities", description: "Dedicated setup for implant placement and post-op follow-up." },
 ];
 
-export const FEATURES = [
-  "Experienced M.D.S. Specialists",
-  "Modern Equipment",
-  "Pain-Free Treatments",
-  "Sterile & Hygienic Environment",
-  "Affordable Dental Care",
-  "Personalized Treatment Plans",
+export const ABOUT_POINTS = [
+  "Serving Giridih families since 2014",
+  "Comfortable, anxiety-free treatment environment",
+  "Modern equipment for accurate diagnosis",
+  "Ethical, need-based treatment recommendations",
+  "Transparent consultation before every procedure",
 ];
 
 export const TESTIMONIALS = [
   {
-    name: "Rohit Kumar",
-    text: "The service and care of doctors and staff are excellent. Highly recommended.",
-    rating: 5,
+    name: "Rakesh M.",
+    text: "Very professional doctor who explains treatment in detail.",
   },
   {
-    name: "Sneha Verma",
-    text: "Very hygienic clinic and affordable treatment. Great experience.",
-    rating: 5,
+    name: "Priya S.",
+    text: "The clinic is clean and the staff is very supportive.",
   },
   {
-    name: "Manoj Singh",
-    text: "Soft spoken, friendly and knowledgeable doctors with excellent treatment quality.",
-    rating: 5,
+    name: "Anita D.",
+    text: "My child was comfortable throughout the treatment.",
+  },
+  {
+    name: "Suresh K.",
+    text: "Good experience with root canal treatment, no pain afterwards.",
+  },
+];
+
+export const PATIENT_GROUPS = [
+  {
+    title: "Kids",
+    description: "Gentle handling, simple explanations, and patience with first-time dental visits.",
+  },
+  {
+    title: "Adults",
+    description: "Straightforward treatment plans with clear cost and timeline discussions.",
+  },
+  {
+    title: "Senior Citizens",
+    description: "Extra care taken for comfort, mobility and denture or implant needs.",
   },
 ];
 
 export const GALLERY_IMAGES = [
   "/images/clinic.png",
-  "/images/hero-action.png",
-  "/images/patient-treatment.png",
-  "/images/clinic.png",
-  "/images/hero-action.png",
-  "/images/patient-treatment.png",
+  "/images/treatment.png",
+  "/images/happy-patient.png",
+  "/images/hero-clinic.png",
 ];

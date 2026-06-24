@@ -3,9 +3,9 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Doctors from "@/components/Doctors";
+import PatientExperience from "@/components/PatientExperience";
 import Facilities from "@/components/Facilities";
 import Testimonials from "@/components/Testimonials";
-import Gallery from "@/components/Gallery";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -20,9 +20,9 @@ export default function Home() {
         <About />
         <Services />
         <Doctors />
+        <PatientExperience />
         <Facilities />
         <Testimonials />
-        <Gallery />
         <CTA />
         <Contact />
       </main>

@@ -2,16 +2,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1E293B;
+  --foreground: #1F2937;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #0EA5E9;
-  --color-secondary: #0284C7;
+  --color-primary: #0B5ED7;
+  --color-secondary: #2F80ED;
   --color-accent: #14B8A6;
-  --font-sans: var(--font-poppins), Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-source-sans), Arial, Helvetica, sans-serif;
+  --font-heading: var(--font-lora), Georgia, serif;
 }
 
 html {
@@ -27,30 +28,17 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0EA5E9;
+  background: #0B5ED7;
   border-radius: 8px;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-}
-.animate-float {
-  animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
 .animate-float-slow {
   animation: float-slow 6s ease-in-out infinite;
-}
-
-@keyframes marquee-scale {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
 }

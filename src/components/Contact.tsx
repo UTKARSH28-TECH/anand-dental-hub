@@ -14,125 +14,123 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto">
-          <span className="text-sm font-bold uppercase tracking-wider text-[#14B8A6]">
-            Contact Us
+    <section id="contact" className="py-16 lg:py-24 bg-slate-50">
+      <div className="max-w-6xl mx-auto px-4 lg:px-8">
+        <div className="max-w-2xl">
+          <span className="text-xs font-semibold uppercase tracking-wide text-[#0B5ED7]">
+            Visit Us
           </span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold mt-2 text-[#1E293B]">
+          <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl font-semibold mt-3 text-[#1F2937]">
             Get In Touch
           </h2>
         </div>
 
-        <div className="mt-14 grid lg:grid-cols-2 gap-10">
+        <div className="mt-10 grid lg:grid-cols-2 gap-10">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-5"
+            transition={{ duration: 0.5 }}
+            className="space-y-4"
           >
-            <div className="flex items-start gap-4 bg-sky-50/60 p-5 rounded-2xl">
-              <MapPin className="text-[#0EA5E9] shrink-0" size={24} />
+            <div className="flex items-start gap-3.5 bg-white p-4 rounded-lg border border-slate-200">
+              <MapPin className="text-[#0B5ED7] shrink-0 mt-0.5" size={20} />
               <div>
-                <p className="font-bold text-[#1E293B]">Address</p>
+                <p className="font-semibold text-[#1F2937] text-sm">Address</p>
                 <p className="text-sm text-slate-600 mt-1">
                   {CLINIC.address.line1}, {CLINIC.address.line2},{" "}
                   {CLINIC.address.city}
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-sky-50/60 p-5 rounded-2xl">
-              <Phone className="text-[#0EA5E9] shrink-0" size={24} />
+            <div className="flex items-start gap-3.5 bg-white p-4 rounded-lg border border-slate-200">
+              <Phone className="text-[#0B5ED7] shrink-0 mt-0.5" size={20} />
               <div>
-                <p className="font-bold text-[#1E293B]">Phone</p>
-                <a href={CLINIC.phoneHref} className="text-sm text-slate-600 mt-1 hover:text-[#0EA5E9]">
+                <p className="font-semibold text-[#1F2937] text-sm">Phone</p>
+                <a href={CLINIC.phoneHref} className="text-sm text-slate-600 mt-1 hover:text-[#0B5ED7]">
                   {CLINIC.phone}
                 </a>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-sky-50/60 p-5 rounded-2xl">
-              <Mail className="text-[#0EA5E9] shrink-0" size={24} />
+            <div className="flex items-start gap-3.5 bg-white p-4 rounded-lg border border-slate-200">
+              <Mail className="text-[#0B5ED7] shrink-0 mt-0.5" size={20} />
               <div>
-                <p className="font-bold text-[#1E293B]">Email</p>
-                <a href={`mailto:${CLINIC.email}`} className="text-sm text-slate-600 mt-1 hover:text-[#0EA5E9]">
+                <p className="font-semibold text-[#1F2937] text-sm">Email</p>
+                <a href={`mailto:${CLINIC.email}`} className="text-sm text-slate-600 mt-1 hover:text-[#0B5ED7]">
                   {CLINIC.email}
                 </a>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-sky-50/60 p-5 rounded-2xl">
-              <Clock className="text-[#0EA5E9] shrink-0" size={24} />
+            <div className="flex items-start gap-3.5 bg-white p-4 rounded-lg border border-slate-200">
+              <Clock className="text-[#0B5ED7] shrink-0 mt-0.5" size={20} />
               <div>
-                <p className="font-bold text-[#1E293B]">Opening Hours</p>
-                <p className="text-sm text-slate-600 mt-1">{CLINIC.hours}</p>
-                <p className="text-xs font-semibold text-[#14B8A6] mt-1">
-                  Emergency Consultation Available
-                </p>
+                <p className="font-semibold text-[#1F2937] text-sm">Timings</p>
+                <p className="text-sm text-slate-600 mt-1">{CLINIC.hoursWeekday}</p>
+                <p className="text-sm text-slate-600">{CLINIC.hoursSunday}</p>
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden h-56 border border-slate-100">
+            <div className="rounded-lg overflow-hidden h-56 border border-slate-200">
               <iframe
-                title="Anand Dental Hub Location Map"
+                title="Shawitry Dental Care & Implant Centre Location"
                 className="w-full h-full"
                 loading="lazy"
-                src="https://www.google.com/maps?q=Giridih,Jharkhand,815301&output=embed"
+                src="https://www.google.com/maps?q=Buxidih,Giridih,Jharkhand,815301&output=embed"
               />
             </div>
           </motion.div>
 
           <motion.form
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             onSubmit={handleSubmit}
-            className="bg-gradient-to-b from-sky-50/70 to-white p-7 rounded-3xl shadow-lg border border-slate-100 space-y-4"
+            className="bg-white p-6 lg:p-7 rounded-lg border border-slate-200 space-y-4 h-fit"
           >
             <div>
-              <label className="text-sm font-semibold text-[#1E293B]">Name</label>
+              <label className="text-sm font-medium text-[#1F2937]">Name</label>
               <input
                 required
                 type="text"
                 placeholder="Your full name"
-                className="mt-1.5 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]"
+                className="mt-1.5 w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5ED7]/40 focus:border-[#0B5ED7]"
               />
             </div>
             <div>
-              <label className="text-sm font-semibold text-[#1E293B]">Phone</label>
+              <label className="text-sm font-medium text-[#1F2937]">Phone</label>
               <input
                 required
                 type="tel"
                 placeholder="Your phone number"
-                className="mt-1.5 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]"
+                className="mt-1.5 w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5ED7]/40 focus:border-[#0B5ED7]"
               />
             </div>
             <div>
-              <label className="text-sm font-semibold text-[#1E293B]">Email</label>
+              <label className="text-sm font-medium text-[#1F2937]">Email</label>
               <input
                 type="email"
                 placeholder="Your email address"
-                className="mt-1.5 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]"
+                className="mt-1.5 w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5ED7]/40 focus:border-[#0B5ED7]"
               />
             </div>
             <div>
-              <label className="text-sm font-semibold text-[#1E293B]">Message</label>
+              <label className="text-sm font-medium text-[#1F2937]">Message</label>
               <textarea
                 rows={4}
                 placeholder="Tell us about your dental concern"
-                className="mt-1.5 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]"
+                className="mt-1.5 w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5ED7]/40 focus:border-[#0B5ED7]"
               />
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 text-white font-semibold bg-gradient-to-r from-[#0EA5E9] to-[#0284C7] py-3.5 rounded-xl shadow-lg hover:scale-[1.02] transition-transform"
+              className="w-full flex items-center justify-center gap-2 text-white font-semibold bg-[#0B5ED7] py-3 rounded-md hover:bg-[#0A52BD] transition-colors"
             >
-              <Send size={18} /> Submit
+              <Send size={16} /> Submit
             </button>
             {submitted && (
               <p className="text-sm text-center font-medium text-[#14B8A6]">
-                Thank you! We will contact you shortly.
+                Thank you — we will get back to you shortly.
               </p>
             )}
           </motion.form>

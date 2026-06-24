@@ -24,7 +24,7 @@ export default function FloatingButtons() {
             exit={{ opacity: 0, y: 10 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             aria-label="Back to top"
-            className="w-11 h-11 rounded-full bg-[#1E293B] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            className="w-11 h-11 rounded-full bg-[#1F2937] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
           >
             <ArrowUp size={20} />
           </motion.button>
@@ -34,7 +34,7 @@ export default function FloatingButtons() {
       <a
         href={CLINIC.phoneHref}
         aria-label="Call Now"
-        className="w-[52px] h-[52px] rounded-full bg-[#0EA5E9] text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
+        className="w-[52px] h-[52px] rounded-full bg-[#0B5ED7] text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
       >
         <Phone size={22} />
       </a>

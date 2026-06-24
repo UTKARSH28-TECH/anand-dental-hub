@@ -6,33 +6,32 @@ import { CLINIC } from "@/lib/data";
 
 export default function CTA() {
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-r from-[#0EA5E9] via-[#0284C7] to-[#14B8A6]">
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%)]" />
+    <section className="py-16 bg-[#0B5ED7]">
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
+        initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto px-4 text-center relative z-10"
+        transition={{ duration: 0.5 }}
+        className="max-w-3xl mx-auto px-4 text-center"
       >
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-          Ready For A Healthier Smile?
+        <h2 className="font-[family-name:var(--font-heading)] text-2xl sm:text-3xl font-semibold text-white">
+          Have a dental concern you've been putting off?
         </h2>
-        <p className="mt-4 text-sky-50 text-lg">
-          Book your consultation today with our experienced dental specialists.
+        <p className="mt-3 text-blue-100">
+          Come in for a consultation — we'll explain what's needed and what isn't.
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <div className="mt-7 flex flex-wrap justify-center gap-3">
           <a
             href="#contact"
-            className="flex items-center gap-2 font-semibold text-[#0284C7] bg-white px-7 py-3.5 rounded-full shadow-xl hover:scale-105 transition-transform"
+            className="flex items-center gap-2 font-semibold text-[#0B5ED7] bg-white px-6 py-3 rounded-md hover:bg-blue-50 transition-colors"
           >
             <CalendarCheck size={18} /> Book Appointment
           </a>
           <a
             href={CLINIC.phoneHref}
-            className="flex items-center gap-2 font-semibold text-white border-2 border-white/70 px-7 py-3.5 rounded-full hover:bg-white/10 transition-colors"
+            className="flex items-center gap-2 font-semibold text-white border border-white/60 px-6 py-3 rounded-md hover:bg-white/10 transition-colors"
           >
-            <PhoneCall size={18} /> Call {CLINIC.phone}
+            <PhoneCall size={18} /> {CLINIC.phone}
           </a>
         </div>
       </motion.div>
